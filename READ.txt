@@ -1,0 +1,22 @@
+With the genesis block creation completed, we will now initialize the nodes with the genesis' json file.
+
+Using geth, initialize each node with the new networkname.json.
+
+./geth --datadir node1 init alvinet.json
+./geth --datadir node2 init alvinet.json
+
+
+
+Now the nodes can be used to begin mining blocks.
+
+Run the nodes in separate terminal windows with the commands:
+
+./geth --datadir node1 --unlock "6FDDe64b73b1240B6B59cfb90972d55C16B453Da" --mine --rpc --allow-insecure-unlock
+./geth --datadir node2 --unlock "E5f9F696003354FE406Dc5F129264A914C3769C1" --mine --port 30304 --bootnodes "enode://0f692f5fd0c03142a42fe052d52c116bb74617d5afbb3cd09742241da239cd4bbf1ce441ee7b8e3d7b4352d8b40f29db6d252a2e6234f53daf2bba0eaadbe223@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+
+ChainID: 666
+
+
+Node 1: 0x6FDDe64b73b1240B6B59cfb90972d55C16B453Da
+Node 2: 0xE5f9F696003354FE406Dc5F129264A914C3769C1
+
